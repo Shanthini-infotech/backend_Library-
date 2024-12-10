@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="634.0" prefWidth="1086.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.admin.AdminRecordsFormController">
+   <children>
+      <ImageView fitHeight="634.0" fitWidth="1086.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/UsersForm.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#0a1747" layoutX="86.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Records Manage" wrappingWidth="301.13671875">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Text>
+      <Text fill="#0a1747" layoutX="129.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtBookId" alignment="CENTER" layoutX="128.0" layoutY="247.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <Text fill="#0a1747" layoutX="128.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email*">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtUserEmail" alignment="CENTER" layoutX="128.0" layoutY="321.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <Text fill="#0a1747" layoutX="128.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date*">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#0a1747" layoutX="166.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Button layoutX="126.0" layoutY="468.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Add" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assest/icons8-add-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="244.0" layoutY="466.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Clear" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assest/icons8-clear-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TableView fx:id="tblRecords" layoutX="428.0" layoutY="128.0" prefHeight="476.0" prefWidth="657.0" stylesheets="@../../style/TableView.css">
+         <columns>
+            <TableColumn fx:id="colTransactionId" prefWidth="100.0" text="Transaction Id" />
+            <TableColumn fx:id="colBookId" prefWidth="120.0" text="Book Id" />
+            <TableColumn fx:id="colUserName" prefWidth="150.0" text="User Email" />
+            <TableColumn fx:id="colReturnDate" prefWidth="120.0" text="Return Date" />
+            <TableColumn fx:id="colDateTime" prefWidth="160.0" text="Date &amp; Time" />
+         </columns>
+         <styleClass>
+            <String fx:value="column-header" />
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
+         </styleClass>
+      </TableView>
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="134.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/icons8-bookstore-32.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="133.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/icons8-id-48.png" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="txtReturnDate" layoutX="125.0" layoutY="396.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtTransactionId" alignment="CENTER" layoutX="704.0" layoutY="71.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <Button layoutX="951.0" layoutY="72.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Delete" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assest/icons8-delete-30.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="#0a1747" layoutX="552.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Id*">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
